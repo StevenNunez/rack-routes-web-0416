@@ -8,4 +8,7 @@ ActiveRecord::Base.establish_connection(
 
 $: << '.'
 
+require 'app/controllers/application_controller'
+
 Dir["app/models/*.rb"].each {|f| require f}
+Dir["app/controllers/*.rb"].each {|f| require f}
